@@ -98,23 +98,106 @@ atom-text-editor, :host {
       }
     }
   }
-
-  &[data-grammar*="php"] {
-      .comment {
-          color: #ffcc66;
-      }
-  }
 }
 
-.bracket-matcher .region {
-  border-bottom: 1px solid #f8de7e;
-  margin-top: -1px;
-  opacity: .7;
-}
 
 .comment {
   color: #7C7C7C;
 }
+
+.variable {
+    color: @blue;
+}
+
+
+//////////////////////
+//////////////////////
+// PHP styles
+.php {
+
+    .comment {
+        color: #ffcc66;
+    }
+
+} // END .php
+
+
+
+//////////////////////
+//////////////////////
+// CSS styles
+.css {
+
+    .property-value,
+    .at-rule {
+        color: @pink;
+    }
+
+    .entity {
+        color: @pink2;
+    }
+
+    .property-name {
+        color: @blue;
+    }
+
+    .variable {
+        color: @teal;
+    }
+
+    .string {
+        color: @green;
+    }
+
+    .important,
+    .numeric,
+    .unit {
+        color: @salmon;
+    }
+
+    .support {
+
+        &.property-value {
+            color: @cyan;
+        }
+    }
+
+
+    // SCSS
+    &.scss {
+
+        /*.support,
+        .other {
+            color: @cyan;
+        }*/
+
+        .unit {
+            color: @salmon;
+        }
+
+        .property-name {
+            color: @blue;
+        }
+
+        .punctuation {
+            color: @pink2;
+        }
+
+        .string {
+            color: @green;
+        }
+
+        .comment {
+            color: @gray;
+        }
+
+    }
+
+} //END .css
+
+
+
+
 
 .entity {
   color: #FFD2A7;
@@ -127,6 +210,13 @@ atom-text-editor, :host {
   &.other.inherited-class {
     color: #9B5C2E;
   }
+}
+
+/*
+.bracket-matcher .region {
+  border-bottom: 1px solid #f8de7e;
+  margin-top: -1px;
+  opacity: .7;
 }
 
 .keyword {
@@ -341,3 +431,4 @@ atom-text-editor, :host {
     background-color: #751012;
   }
 }
+*/

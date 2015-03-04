@@ -28,3 +28,64 @@
 @syntax-color-added: #A8FF60;
 @syntax-color-modified: #E9C062;
 @syntax-color-removed: #CC6666;
+
+
+
+//////////////////////////////
+//////////////////////////////
+// Colors from the other theme
+@base1: #93a1a1;
+@base3: red;
+@base01: #586e75;
+
+@red: #ff0000;
+@cyan: #66ffff; //#91dfeb;
+@magenta: #d33682;
+@green: #33cc66;
+
+@gray: #999999;
+
+@light_green: #87f479;
+@light_red: #f47979;
+@blue: #0099ff;
+@light_blue: #6699ff;
+@orange: #ffcc66;
+@light_gray: #b8b9b9;
+@lightish_red: #ffcccc; //It's not pink, it's LIGHTISH RED!
+@salmon: #ff6666;
+@pink: #ff66b5;
+@pink2: #ff99ff;
+@beige: #ffffcc;
+@mint_green: #66cc99;
+@light_green: #B2DFB6;
+@teal: #00b0bf;
+
+@bg-color: #222222;
+@gutter-bg: lighten(@bg-color, 2%);
+@main-rule: @beige; //Main text and line numbers
+@line-number-color: desaturate(@main-rule, 40%);
+@folded-line: spin(yellow, 45);
+@constants: mix(@entities, @cursor);
+@number: @light_green;
+@cursor: white;
+@selection: #3f5f6f;
+@bracket-matcher: lighten(spin(@brace, 45), 15%);
+@comment: @light_gray;
+@entities: @blue;
+@variable: @cyan;
+@brace: darken(@variable, 30);
+@string: @light_red;
+
+@php-operator: desaturate(@entities, 40%);
+@php-function: @entities;
+@php-entity: @variable;
+@php-class-functions: @green;
+@php-punctuation-modifier: lighten(desaturate(@php-class-functions, 30%), 30%);
+@php-comment: @orange;
+@php-keyword: @green;
+@php-function-call: saturate(@main-rule, 90%);
+@php-property: @php-function-call;
+@php-constant: @green;
+@php-numeric: @salmon;
+
+@javascript-comment: @light_gray;
