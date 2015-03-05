@@ -109,14 +109,81 @@ atom-text-editor, :host {
     color: @blue;
 }
 
+.illegal {
+    color: @orange;
+}
+
+.invalid {
+    color: @red;
+}
+
 
 //////////////////////
 //////////////////////
 // PHP styles
 .php {
 
+    color: @beige;
+
+    .source,
+    .support {
+        //color: @salmon;
+        color: @blue;
+    }
+
+    .begin,
+    .end {
+        //&:extend(.php .source);
+        color: @salmon;
+        font-weight: bold;
+
+        &.embedded {
+            &:extend(.php .begin);
+        }
+
+
+    }
+
+    .punctuation,
+    .basic_functions,
+    .operator {
+        color: @blue;
+    }
+
+    .variable {
+        color: @cyan;
+    }
+
+    .type {
+        color: @blue;
+        font-weight: bold;
+    }
+
+    .construct,
+    .control,
+    .new {
+        color: @green;
+    }
+
+    .string,
+    .string-contents {
+        color: @light_red;
+    }
+
+    .constant {
+        color: @yellow;
+    }
+
+    .language {
+        color: @green;
+    }
+
+    .numeric {
+        color: @light_red;
+    }
+
     .comment {
-        color: #ffcc66;
+        color: @orange;
     }
 
 } // END .php
@@ -142,7 +209,7 @@ atom-text-editor, :host {
     }
 
     .variable {
-        color: @teal;
+        color: @mint_green;
     }
 
     .string {
@@ -184,7 +251,11 @@ atom-text-editor, :host {
         }
 
         .string {
-            color: @green;
+            color: @light_green;
+        }
+
+        .parameter {
+            color: @yellow;
         }
 
         .comment {
@@ -194,6 +265,46 @@ atom-text-editor, :host {
     }
 
 } //END .css
+
+
+
+
+///////////////////
+/// HTML
+.html.embedded {
+
+    color: @beige;
+
+    .tag {
+        color: @blue;
+    }
+
+    .function {
+        color: @beige;
+    }
+
+    .comment {
+        color: @gray;
+    }
+
+}
+
+
+
+
+///////////////////
+/// JS
+.js {
+
+    .string{
+        color: @light_green;
+    }
+
+    .comment {
+        color: @gray;
+    }
+
+}
 
 
 
