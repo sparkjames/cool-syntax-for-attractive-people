@@ -183,7 +183,7 @@ atom-text-editor, :host {
     }
 
     .comment {
-        color: @orange;
+        color: @gray_orange;
     }
 
 } // END .php
@@ -271,7 +271,7 @@ atom-text-editor, :host {
 
 ///////////////////
 /// HTML
-.html.embedded {
+.html/*.embedded*/ {
 
     color: @beige;
 
@@ -279,12 +279,21 @@ atom-text-editor, :host {
         color: @blue;
     }
 
+    .attribute-name {
+        color: @gray_green;
+    }
+
+    .string,
+    .toc-list {
+        color: @cyan;
+    }
+
     .function {
         color: @beige;
     }
 
     .comment {
-        color: @gray;
+        color: @gray_orange;
     }
 
 }
