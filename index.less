@@ -133,13 +133,14 @@ atom-text-editor, :host {
 
     .begin,
     .end {
-        //&:extend(.php .source);
-        color: @salmon;
-        font-weight: bold;
+        //&:not(.string){
+            color: @salmon;
+            font-weight: bold;
 
-        &.embedded {
-            &:extend(.php .begin);
-        }
+            &.embedded {
+                &:extend(.php .begin);
+            }
+        //}
 
 
     }
@@ -286,11 +287,15 @@ atom-text-editor, :host {
     .string,
     .toc-list {
         color: @cyan;
+
+        &.php {
+            color: @salmon;
+        }
     }
 
-    .function {
+    /*.function {
         color: @beige;
-    }
+    }*/
 
     .comment {
         color: @gray_orange;
